@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="baseLayout" template="/BaseLayout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="body" value="" /> 
+    </definition>
+    <!--Baterias-->
+    <definition name="/Bateria/AltaModificacion.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Formulario Bateria" />
+        <put-attribute name="body" value="/Bateria/AltaModificacion.jsp" />
+    </definition>
+    <definition name="/Bateria/Todos.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Baterias" />
+        <put-attribute name="body" value="/Bateria/Todos.jsp" />
+    </definition>
+    <!--Clientes-->
+    <definition name="/Cliente/AltaModificacion.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Formulario Cliente" />
+        <put-attribute name="body" value="/Cliente/AltaModificacion.jsp" />
+    </definition>
+    <definition name="/Cliente/Todos.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Clientes" />
+        <put-attribute name="body" value="/Cliente/Todos.jsp" />
+    </definition>
+    <!--Marcas-->
+    <definition name="/Marca/AltaModificacion.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Formulario Marca" />
+        <put-attribute name="body" value="/Marca/AltaModificacion.jsp" />
+    </definition>
+    <definition name="/Marca/Todos.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Marcas" />
+        <put-attribute name="body" value="/Marca/Todos.jsp" />
+    </definition>
+    <!--Modelos-->
+    <definition name="/Modelo/AltaModificacion.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Formulario Modelo" />
+        <put-attribute name="body" value="/Modelo/AltaModificacion.jsp" />
+    </definition>
+    <definition name="/Modelo/Todos.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Modelos" />
+        <put-attribute name="body" value="/Modelo/Todos.jsp" />
+    </definition>
+    <!--Vehiculos-->
+    <definition name="/Vehiculo/AltaModificacion.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Formulario Vehiculo" />
+        <put-attribute name="body" value="/Vehiculo/AltaModificacion.jsp" />
+    </definition>
+    <definition name="/Vehiculo/Todos.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Vehiculos" />
+        <put-attribute name="body" value="/Vehiculo/Todos.jsp" />
+    </definition>
+    <!--Ventas-->
+    <definition name="/Venta/AltaModificacion.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Formulario Venta" />
+        <put-attribute name="body" value="/Venta/AltaModificacion.jsp" />
+    </definition>
+    <definition name="/Venta/Todos.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Ventas" />
+        <put-attribute name="body" value="/Venta/Todos.jsp" />
+    </definition>
+   
+  
+</tiles-definitions>

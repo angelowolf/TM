@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-sep-2013 15:59:20 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+  <class name="Persistencia.Modelo.Cliente" table="Cliente">
+    <id column="id_cliente" name="idCliente">
+      <generator class="identity"/>
+    </id>
+    <property column="nombre" length="50" name="nombre" type="string"/>
+    <property column="apellido" length="50" name="apellido" type="string"/>
+    <property name="telefonoUno"/>
+    <property name="telefonoDos"/>
+    <list cascade="all-delete-orphan"  name="vehiculos" table="vehiculo">
+      <key column="id_cliente"/>
+      <index column="ORDEN"/>
+      <one-to-many class="Persistencia.Modelo.Vehiculo"/>
+    </list>
+  </class>
+</hibernate-mapping>
