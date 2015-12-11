@@ -38,7 +38,6 @@ public class VentaAction extends ActionSupport implements ModelDriven<Venta> {
     private final ControladorCliente controladorCliente = new ControladorCliente();
     private final Map<String, Object> sesion = ActionContext.getContext().getSession();
     private int cantidad;
-    private Date fecha;
     private int idCliente, idBateria;
 
     private boolean validar() {
@@ -60,7 +59,7 @@ public class VentaAction extends ActionSupport implements ModelDriven<Venta> {
         }
         Calendar calendario = new GregorianCalendar();
         Date hoy = calendario.getTime();
-        if (fecha == null || fecha.after(hoy)) {
+        if (venta.getFecha() == null || venta.getFecha().after(hoy)) {
             addFieldError("", "La fecha debe ser anterior al dia actual");
             f = false;
         }
@@ -76,6 +75,8 @@ public class VentaAction extends ActionSupport implements ModelDriven<Venta> {
         venta.setBateria(b);
         venta.setCliente(c);
         venta.setPrecio(b.getPrecio());
+
+        System.out.println(venta.getFecha().toString());
         if (venta.getIdVenta() != 0) {
             controladorVenta.actualizar(venta);
             sesion.put("mensaje", "Venta Modificado.");
@@ -157,14 +158,6 @@ public class VentaAction extends ActionSupport implements ModelDriven<Venta> {
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
-    }
-
-    public Date getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
     }
 
     private int bateria, cliente;

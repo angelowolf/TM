@@ -75,7 +75,7 @@ $(function () {
         }
     });
 
-    var inputFecha = $('input[name=fecha]');
+    var inputFecha = $('input[id=fecha]');
     inputFecha.after('<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>');
     inputFecha.parent().css("display", "inline-table");
     $('#fecha').datetimepicker({

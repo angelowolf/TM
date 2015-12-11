@@ -35,7 +35,7 @@
         <div class="form-group">
             <label>Fecha</label> 
             <div class='input-group date' id='fecha'>
-                <s:textfield type='text' name="fecha"/>
+                <s:textfield type='text' id="fecha" name="venta.fecha" />
             </div>
         </div>
         <div class="form-group">
@@ -45,8 +45,7 @@
                     <s:textfield class="form-control" type="text" name="venta.cliente.nombreCompleto" id="acCliente" placeholder="Ingrese el cliente"/>
                 </div>
             </div>
-        </div>
-    </div>
+        </div>    
     <s:submit value="Confirmar" cssClass="btn btn-success col-md-offset-6 col-md-2"/>
     <%--</s:push>--%>            
 </s:form>
